@@ -46,8 +46,7 @@ function SwiperProduct({ allProduct }) {
           }}
           // modules={[ Pagination, Navigation]}
           className=" h-44 md:h-80 mt-4">
-          {allProduct
-            ? allProduct.map((product) => (
+          {allProduct ? allProduct.map((product) => (
                 <SwiperSlide className=" rounded-xl" key={product.id}>
                   <NavLink to={`/product/${product.title}`} className="flex flex-col w-full h-full items-center">
                     <img src={product.img} alt={product.title} className=" !w-20 !h-20 md:!w-40 md:!h-40" />
