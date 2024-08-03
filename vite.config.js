@@ -8,7 +8,7 @@ export default defineConfig(() => {
         proxy: {
           '/api': {
             target: 'https://yousefshopapi.liara.run',
-            changeOrigin: true,
+            changeOrigin: false,
             secure: true,
           } 
         }
