@@ -9,7 +9,7 @@ export default defineConfig(() => {
           '/api': {
             target: 'https://yousefshopapi.liara.run',
             changeOrigin: true,
-            secure: false,
+            secure: true,
           } 
         }
       }
