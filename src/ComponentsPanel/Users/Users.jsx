@@ -38,7 +38,7 @@ export default function Users() {
   };
 
   const removeUser = () => {
-    fetch(`/api/users/${mainUserIdDelete}`, {
+    fetch(`https://yousefshopapi.liara.run/api/users/${mainUserIdDelete}`, {
       method: 'DELETE',
     }).then((res) => {
       if (res.status == 200) {
@@ -59,7 +59,7 @@ export default function Users() {
   };
   const EditUserModalSubmitAction = (event) => {
     event.preventDefault();
-    fetch(`/api/users/${mainUserIdEdit}`, {
+    fetch(`https://yousefshopapi.liara.run/api/users/${mainUserIdEdit}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

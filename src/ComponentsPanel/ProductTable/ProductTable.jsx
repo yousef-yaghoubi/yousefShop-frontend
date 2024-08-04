@@ -41,7 +41,7 @@ export default function ProductTable({ getAllProducts }) {
   }, [fetchProduct.data]);
 
   const deleteSubmit = async () => {
-    await fetch(`/api/products/${productId}`, {
+    await fetch(`https://yousefshopapi.liara.run/api/products/${productId}`, {
       method: 'DELETE',
     }).then((res) => {
       if(res.status == 200){
@@ -63,7 +63,7 @@ export default function ProductTable({ getAllProducts }) {
       colors: newProductColors,
     };
 
-    fetch(`/api/products/${productId}`, {
+    fetch(`https://yousefshopapi.liara.run/api/products/${productId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

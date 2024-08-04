@@ -55,7 +55,7 @@ function Login() {
   const validationNameSubmit = async () => {
     setIsLoading(true);
     let isReepet;
-    await fetch(`/api/users/user=${inputSetUserName}`)
+    await fetch(`https://yousefshopapi.liara.run/api/users/user=${inputSetUserName}`)
       .then((res) => res.json())
       .then(async (result) => (isReepet = result));
     if (
@@ -113,9 +113,9 @@ function Login() {
           },
         };
 
-        axios.post(`/api/users`, body, headers).then((res) => {
+        axios.post(`https://yousefshopapi.liara.run/api/users`, body, headers).then((res) => {
           if (res.status == 200) {
-            fetch(`/api/users/${inputEmail}/${inputSetPass1}`)
+            fetch(`https://yousefshopapi.liara.run/api/users/${inputEmail}/${inputSetPass1}`)
               .then((res) => res.json())
               .then((result) => {
                 dispatch(
@@ -241,7 +241,7 @@ function Login() {
                       className="w-full mb-4 mt-8  h-10 rounded-xl bg-orange-theme text-white"
                       onClick={() => {
                         setIsLoading(true);
-                        fetch(`/api/users/${inputEmail}`)
+                        fetch(`https://yousefshopapi.liara.run/api/users/${inputEmail}`)
                           .then((res) => res.json())
                           .then((result) =>
                             result == false
@@ -297,7 +297,7 @@ function Login() {
                       className="w-full mb-4 mt-8  h-10 rounded-xl bg-orange-theme text-white"
                       onClick={() => {
                         setIsLoading(true);
-                        fetch(`/api/users/${inputEmail}/${inputPass}`)
+                        fetch(`https://yousefshopapi.liara.run/api/users/${inputEmail}/${inputPass}`)
                           .then((res) => res.json())
                           .then((result) =>
                             result == false

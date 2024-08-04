@@ -24,7 +24,7 @@ export default function Comments() {
   }, [fetchComment.data]);
 
   const deleteComment = () => {
-    fetch(`/api/comments/${commentId}`, {
+    fetch(`https://yousefshopapi.liara.run/api/comments/${commentId}`, {
       method: 'DELETE',
     }).then((res) => {
       if (res.status == 200) {
@@ -34,7 +34,7 @@ export default function Comments() {
     setIsShowDeleteModal(false);
   };
   const AcceptModalSubmitAction = () => {
-    fetch(`/api/comments/accept/${commentId}`, {
+    fetch(`https://yousefshopapi.liara.run/api/comments/accept/${commentId}`, {
       method: 'POST',
     }).then((res) => res.json());
     fetchComment.refetch();
@@ -42,7 +42,7 @@ export default function Comments() {
   };
 
   const RejectModalSubmitAction = () => {
-    fetch(`/api/comments/reject/${commentId}`, {
+    fetch(`https://yousefshopapi.liara.run/api/comments/reject/${commentId}`, {
       method: 'POST',
     }).then((res) => res.json());
     fetchComment.refetch();
@@ -52,7 +52,7 @@ export default function Comments() {
   const EditBodyModalSubmitAction = (event) => {
     event.preventDefault();
     // setBody(mainCommentBody)
-    fetch(`/api/comments/${commentId}`, {
+    fetch(`https://yousefshopapi.liara.run/api/comments/${commentId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

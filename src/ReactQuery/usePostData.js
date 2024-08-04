@@ -6,7 +6,7 @@ function usePostData() {
   const { mutate } = useMutation({
     // mutationKey: ['users'],
     mutationFn: async ({ typePost, body }) => {
-      let url = `/api/${typePost}`;
+      let url = `https://yousefshopapi.liara.run/api/${typePost}`;
       let headers = {
         headers: {
           'Content-Type': 'application/json',

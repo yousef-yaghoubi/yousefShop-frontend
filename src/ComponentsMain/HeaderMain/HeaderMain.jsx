@@ -38,7 +38,7 @@ const HeaderMain = memo(() => {
   useEffect(() => {
     if (profileUser !== null) {
       const profileId = profileUser / 87461946194645613;
-      fetch(`/api/users/id=${profileId}`)
+      fetch(`https://yousefshopapi.liara.run/api/users/id=${profileId}`)
         .then((res) => res.json())
         .then((result) => {
           setProfile(result[0].id);
